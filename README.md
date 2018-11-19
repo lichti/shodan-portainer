@@ -7,15 +7,21 @@
 - Gustavo Lichti
 - gustavo.lichti@gmail.com
 
-
-## Usage: 
+## Usage
 
 ```bash
 virtualenv --python python3 .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 export SHODAN_API_KEY=xxxxxxxxxxxxxxxxxxxxxxx
-python portainer.py 
+python portainer.py
+```
+
+If you has a paid plan, you can use a filters:
+
+```bash
+export SHODAN_FILTER = 'country:"BR"'
+python portainer.py
 ```
 
 ## Output example:

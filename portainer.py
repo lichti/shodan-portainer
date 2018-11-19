@@ -16,16 +16,16 @@ import sys
 import os
 import requests
 
-try:  
-   API_KEY=os.environ["SHODAN_API_KEY"]
+try:
+   API_KEY=os.environ.get('SHODAN_API_KEY')
 except KeyError: 
    print("Please set the environment variable SHODAN_API_KEY")
    sys.exit(1)
 
 QUERY = 'portainer'
 # Filters only work with paid accounts
-# eg.: FILTERS = 'country:"BR"'
-FILTERS = ''
+# - export SHODAN_FILTER = 'country:"BR"'
+FILTERS = os.getenv('SHODAN_FILTER', '')
 
 try:
   # Setup the api
