@@ -53,4 +53,5 @@ Forcing the admin password by extra parameter on portainer CLI - [configuration.
 ## AUTHOR & REVISION
 
 **Author:** Gustavo Lichti <gustavo.lichti@gmail.com>
+
 **Revision:** 
