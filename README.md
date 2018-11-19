@@ -44,7 +44,7 @@ Error: skipping 206.x.y.63
 
 ## WORKAROUND
 
-Forcing the admin password by extra parameter on portainer CLI - [configuration.html#admin-password](https://portainer.readthedocs.io/en/stable/configuration.html#admin-password).
+Forcing the admin password by extra parameter on portainer CLI - [configuration.html#admin-password](https://portainer.readthedocs.io/en/stable/configuration.html#admin-password). On source code [portainer.go#L13-L14](https://github.com/portainer/portainer/blob/develop/api/portainer.go#L13-L14).
 
 ## VULNERABILITY DISCLOSURE TIMELINE
 
