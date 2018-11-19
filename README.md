@@ -54,7 +54,7 @@ Forcing the admin password by extra parameter on portainer CLI - [configuration.
 
 ## VULNERABILITY DISCLOSURE TIMELINE
 
-**2018-11-19:** Vendor was contacted
+**2018-11-19:** Vendor was contacted [#2475](https://github.com/portainer/portainer/issues/2475)
 
 ## AUTHOR & REVISION
 
