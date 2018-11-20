@@ -20,6 +20,8 @@ Portainer provides an API endpoint (/api/users/admin/check) to verify that the a
 
 ## PROOF OF CONCEPT
 
+[![Youtube demo video](http://img.youtube.com/vi/TpxA5Ulz0-E/0.jpg)](http://www.youtube.com/watch?v=TpxA5Ulz0-E "Youtube demo video")
+
 Manual steps to reproduce the vulnerability:
 
 1. `docker run --rm -it -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer`
