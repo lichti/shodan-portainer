@@ -4,7 +4,7 @@ Responsible Disclosure
 
 ## PRODUCT DESCRIPTION
 
-[PORTAINER](https://portainer.io) IS AN OPEN-SOURCE LIGHTWEIGHT MANAGEMENT UI WHICH ALLOWS YOU TO EASILY MANAGE YOUR DOCKER HOSTS OR SWARM CLUSTERS
+[Portainer](https://portainer.io) is an open-source lightweight management UI which allows you to easily manage your Docker hosts or Swarm clusters.
 
 ## BACKGROUND
 
@@ -12,15 +12,15 @@ Responsible Disclosure
 
 ## VULNERABILITY DETAILS
 
-Portainer provides an API endpoint (/api/users/admin/check) to verify that the admin user is already created. This API endpoint will return 404 if admin was not created and 204 if it was already created. This "feature" allows anyone to receive unauthorized access on the host when the portainer is configured incorrectly.
+Portainer provides an API endpoint (/api/users/admin/check) to verify that the admin user is already created. This API endpoint will return `404` if admin was not created and `204` if it was already created. This "feature" allows anyone to receive unauthorized access on the host when the portainer is configured incorrectly.
 
 ## PROOF OF CONCEPT
 
 Manual steps to reproduce the vulnerability:
 
-1. docker run --rm -it -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-2. curl -X GET -s -o /dev/null -w "%{http_code}" http://127.0.0.1:9000/api/users/admin/check
-3. If curl return 404, open web-browser and create a admin password. xdg-open http://127.0.0.1:9000
+1. `docker run --rm -it -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer`
+2. `curl -X GET -s -o /dev/null -w "%{http_code}" http://127.0.0.1:9000/api/users/admin/check`
+3. If curl return `404`, open web-browser and create a admin password. `xdg-open http://127.0.0.1:9000`
 
 Applying this around the world with shodan:
 
@@ -55,6 +55,7 @@ Forcing the admin password by extra parameter on portainer CLI - [configuration.
 ## VULNERABILITY DISCLOSURE TIMELINE
 
 **2018-11-19:** Vendor was contacted [#2475](https://github.com/portainer/portainer/issues/2475)
+
 **2018-11-19:** Vendor response and confirm the vulnerability [2475#issuecomment-440104455](https://github.com/portainer/portainer/issues/2475#issuecomment-440104455)
 
 ## AUTHOR & REVISION
