@@ -2,6 +2,10 @@ Responsible Disclosure
 
 # Portainer - Check if admin already created by a public API endpoint
 
+## CVE
+
+[CVE-2018-19367](https://nvd.nist.gov/vuln/detail/CVE-2018-19367)
+
 ## PRODUCT DESCRIPTION
 
 [Portainer](https://portainer.io) is an open-source lightweight management UI which allows you to easily manage your Docker hosts or Swarm clusters.
